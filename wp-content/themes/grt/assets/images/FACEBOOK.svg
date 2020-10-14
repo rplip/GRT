@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 63.1 (101010) - https://sketch.com -->
+    <title>F823631E-D894-41E7-89B6-21B343E18695</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <linearGradient x1="0%" y1="50%" x2="100%" y2="50%" id="linearGradient-1">
+            <stop stop-color="#00A984" offset="0%"></stop>
+            <stop stop-color="#027BC2" offset="100%"></stop>
+        </linearGradient>
+        <path d="M10.5555556,6.06575223 L6.88330979,6.06575223 L6.88330979,4.40670586 C6.88330979,3.62638798 7.39439554,3.44437187 7.75404847,3.44437187 L10.3249647,3.44437187 L10.3249647,0.0113215763 L6.60023367,0 C3.22224939,0 2.58124117,2.55954714 2.58124117,4.19856303 L2.58124117,6.06575223 L0,6.06575223 L0,9.54931417 L2.58124117,9.54931417 L2.58124117,20 L6.88330979,20 L6.88330979,9.54931417 L10.196763,9.54931417 L10.5555556,6.06575223 Z" id="path-2"></path>
+    </defs>
+    <g id="HOME-PAGE" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-634.000000, -2630.000000)">
+            <rect fill="#FFFFFF" x="0" y="0" width="1440" height="2837"></rect>
+            <g id="FOOTER" transform="translate(85.000000, 2432.000000)">
+                <g>
+                    <rect id="Rectangle" fill="url(#linearGradient-1)" x="0" y="0" width="1271" height="319"></rect>
+                    <g id="PICTO/RESEAU/FACEBOOK" transform="translate(554.000000, 198.000000)">
+                        <mask id="mask-3" fill="white">
+                            <use xlink:href="#path-2"></use>
+                        </mask>
+                        <use id="Fill-256" fill="#000000" xlink:href="#path-2"></use>
+                        <g id="colors/empty" mask="url(#mask-3)" fill="#FFFFFF">
+                            <g transform="translate(-5.000000, 0.000000)" id="Rectangle">
+                                <rect x="0" y="0" width="20" height="20"></rect>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

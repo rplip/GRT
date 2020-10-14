@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="41px" viewBox="0 0 40 41" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 63.1 (101010) - https://sketch.com -->
+    <title>4906529E-C386-4D85-A9B4-CBCA7D6A9F11</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <polygon id="path-1" points="10.0290143 0.859423749 10.0444444 29.1622222 17.6612364 21.546614 18.4469106 22.3322882 9.47368421 31.3055146 0.500457806 22.3322882 1.28613201 21.546614 8.93333333 29.1933333 8.91790328 0.859874588"></polygon>
+    </defs>
+    <g id="HOME-PAGE" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-72.000000, -808.000000)">
+            <rect fill="#FFFFFF" x="0" y="0" width="1440" height="2837"></rect>
+            <g id="NAV-gauche" transform="translate(27.000000, 218.000000)">
+                <g id="Fleche/scroll" transform="translate(65.500000, 607.000000) rotate(-180.000000) translate(-65.500000, -607.000000) translate(56.000000, 591.000000)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <use id="Combined-Shape" fill="#4F4F4F" fill-rule="nonzero" xlink:href="#path-1"></use>
+                    <g id="colors/empty" mask="url(#mask-2)" fill="#333333">
+                        <g transform="translate(-10.000000, -8.000000)" id="Rectangle">
+                            <rect x="0" y="0" width="40" height="40"></rect>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
