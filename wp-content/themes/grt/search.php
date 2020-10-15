@@ -40,7 +40,7 @@
                     <p>Aucun résultat</p>
                 </div>
                 <div class="row justify-content-center align-items-center">
-                <p><a href="http://extranetoko.fr/grtgaz" class="link">Revenir à la page d'accueil</a></p>
+                <p><a href="http://extranetoko.fr/grtgaz-preprod" class="link">Revenir à la page d'accueil</a></p>
                 </div>
             <?php endif; ?>
         </main>

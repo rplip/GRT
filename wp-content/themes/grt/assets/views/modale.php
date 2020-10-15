@@ -5,7 +5,7 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-body">
-                    <video controls controls="controls" autoplay preloaded="auto">
+                    <video controls controls="controls" preloaded="auto">
                         <source src="http://extranetoko.fr/grtgaz-preprod/wp-content/uploads/2020/10/GRTgaz55s.mp4" type="video/mp4">
                         <source src="http://extranetoko.fr/grtgaz-preprod/wp-content/uploads/2020/10/GRTgaz55s.webm" type="video/webm">
                     </video>

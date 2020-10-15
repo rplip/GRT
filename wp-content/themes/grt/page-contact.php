@@ -28,6 +28,22 @@ Template Name: Contact
                             echo 'Nom trop long.';
                             break;
 
+                        case 'shortFirstname' :
+                            echo 'Prénom trop court.';
+                            break;
+
+                        case 'longFirstname' :
+                            echo 'Prénom trop long.';
+                            break;
+
+                        case 'shortPosition' :
+                            echo 'Fonction trop courte.';
+                            break;
+
+                        case 'longPosition' :
+                            echo 'Fonction trop longue.';
+                            break;
+
                         case 'shortObject' :
                             echo 'Objet trop court.';
                             break;
@@ -61,6 +77,20 @@ Template Name: Contact
                     <div class="col-12 mb-3">
                         <label for="contactFormName">Nom *</label>
                         <input type="text" class="form-control" id="contactFormName" value="" name="name" required>
+                        <div class="valid-feedback">
+                            Ok!
+                        </div>
+                    </div>
+                    <div class="col-12 mb-3">
+                        <label for="contactFormName">Prénom *</label>
+                        <input type="text" class="form-control" id="contactFormFirstname" value="" name="firstname" required>
+                        <div class="valid-feedback">
+                            Ok!
+                        </div>
+                    </div>
+                    <div class="col-12 mb-3">
+                        <label for="contactFormName">Fonction *</label>
+                        <input type="text" class="form-control" id="contactFormPosition" value="" name="position" required>
                         <div class="valid-feedback">
                             Ok!
                         </div>

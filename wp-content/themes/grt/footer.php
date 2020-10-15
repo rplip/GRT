@@ -23,18 +23,18 @@
                 <div class="row">
                     <div class="col-2">
                         <div class="row footer__social-icons">
-                            <a href="https://www.facebook.com/GRTgaz" target="_blank"><img src="/grtgaz-preprod/wp-content/themes/grt/assets/images/FACEBOOK.svg" alt="logo" rel="noreferrer"></a>
+                            <a href="https://www.facebook.com/GRTgaz" target="_blank" rel="noreferrer"><img src="/grtgaz-preprod/wp-content/themes/grt/assets/images/FACEBOOK.svg" alt="logo"></a>
                         </div>
                         <div class="row footer__social-icons">
-                            <a href="https://www.instagram.com/grtgaz_fr/" target="_blank"><img src="/grtgaz-preprod/wp-content/themes/grt/assets/images/INSTAGRAM.svg" alt="logo" rel="noreferrer"></a>
+                            <a href="https://www.instagram.com/grtgaz_fr/" target="_blank" rel="noreferrer"><img src="/grtgaz-preprod/wp-content/themes/grt/assets/images/INSTAGRAM.svg" alt="logo"></a>
                         </div>
                     </div>
                     <div class="col-2">
                         <div class="row footer__social-icons">
-                            <a href="https://twitter.com/GRTgaz" target="_blank"><img src="/grtgaz-preprod/wp-content/themes/grt/assets/images/TWITTER.svg" alt="logo" rel="noreferrer"></a>
+                            <a href="https://twitter.com/GRTgaz" target="_blank" rel="noreferrer"><img src="/grtgaz-preprod/wp-content/themes/grt/assets/images/TWITTER.svg" alt="logo"></a>
                         </div>
                         <div class="row footer__social-icons">
-                            <a href="https://www.youtube.com/user/GRTgazOfficiel" target="_blank"><img src="/grtgaz-preprod/wp-content/themes/grt/assets/images/YOUTUBE.svg" alt="logo" rel="noreferrer"></a>
+                            <a href="https://www.youtube.com/user/GRTgazOfficiel" target="_blank" rel="noreferrer"><img src="/grtgaz-preprod/wp-content/themes/grt/assets/images/YOUTUBE.svg" alt="logo"></a>
                         </div>
                     </div>
                 </div>

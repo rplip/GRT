@@ -15,7 +15,7 @@ if ( ! function_exists( 'grt_scripts' ) ) :
         // Déclarer un autre fichier CSS
         wp_enqueue_style( 
             'grt-BScss', 
-            'https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css',
+            get_template_directory_uri() . '/assets/css/bootstrap.min.css',
             array(), 
             '4.5.2'
         );
@@ -99,6 +99,8 @@ function contact_form_treatment() {
 
            
             $name = strip_tags(trim($_POST['name']));
+            $firstname = strip_tags(trim($_POST['firstname']));
+            $position = strip_tags(trim($_POST['position']));
             $email = $_POST['email'];
             $object = strip_tags(trim($_POST['object']));
             $message = strip_tags(trim($_POST['message']));
@@ -112,6 +114,30 @@ function contact_form_treatment() {
             else if (strlen($name) > 64)
             {
                 $url = add_query_arg('formError', 'longName', wp_get_referer());
+				wp_safe_redirect($url);
+				exit();
+            }
+            else if (strlen($firstname) < 2)
+            {
+                $url = add_query_arg('formError', 'shortFirstname', wp_get_referer());
+                wp_safe_redirect($url);
+				exit();
+            } 
+            else if (strlen($firstname) > 64)
+            {
+                $url = add_query_arg('formError', 'longFirstname', wp_get_referer());
+				wp_safe_redirect($url);
+				exit();
+            }
+            else if (strlen($position) < 2)
+            {
+                $url = add_query_arg('formError', 'shortPosition', wp_get_referer());
+                wp_safe_redirect($url);
+				exit();
+            } 
+            else if (strlen($position) > 128)
+            {
+                $url = add_query_arg('formError', 'longPosition', wp_get_referer());
 				wp_safe_redirect($url);
 				exit();
             }
@@ -145,6 +171,8 @@ function contact_form_treatment() {
                 global $wpdb;
                 $wpdb->insert ('wp_contacts', array (
                     'name' => $name,
+                    'firstname' => $firstname,
+                    'position' => $position,
                     'email' => $email,
                     'object' => $object,
                     'message' => $message
