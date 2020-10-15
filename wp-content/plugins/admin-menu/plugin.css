@@ -1,0 +1,20 @@
+h1 {
+    color: #3c4f69;
+    margin: 2em 0 !important;
+}
+
+table {
+    color: #3c4f69;
+}
+
+.pull-right {
+    float: right !important;
+}
+
+.pull-left {
+    float: left !important;
+}
+
+.search {
+    display: none !important;
+}

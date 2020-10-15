@@ -20,6 +20,13 @@ if ( ! function_exists( 'grt_scripts' ) ) :
             '4.5.2'
         );
 
+        wp_enqueue_style(
+            'grt-FA',
+            'https://pro.fontawesome.com/releases/v5.10.0/css/all.css',
+            array(),
+            '5.10'
+        );
+
         // Autre fichier CSS
         wp_enqueue_style( 
             'grt-MainCss', 
@@ -189,10 +196,62 @@ function contact_form_treatment() {
 	}
 }
 
+
+if ( is_admin()) {
+    function my_admin_menu() {
+		add_menu_page(
+			__( 'Sample page', 'my-textdomain' ),
+			__( 'Contacts', 'my-textdomain' ),
+			'manage_options',
+			'sample-page',
+			'my_admin_page_contents',
+			'dashicons-testimonial',
+			6
+		);
+	}
+
+    add_action( 'admin_menu', 'my_admin_menu' );
+
+    function my_admin_page_contents() { 
+          include 'assets/views/contact.php'; 
+    }
+        
+    function register_my_plugin_scripts() {
+    wp_register_style( 'my-plugin', plugins_url( '/admin-menu/plugin.css' ) );
+    wp_register_style( 'my-plugin-bs-editable', plugins_url( '/admin-menu/bs_editable.css' ) );
+    wp_register_style( 'my-plugin-bs-table', get_template_directory_uri() .'/assets/css/bstable.min.css' );
+    wp_register_style( 'my-plugin-bootstrap', get_template_directory_uri() . '/assets/css/bootstrap.min.css');
+    wp_register_style( 'my-plugin-fa', 'https://pro.fontawesome.com/releases/v5.10.0/css/all.css');
+    wp_register_script( 'my-plugin', plugins_url( '/admin-menu/app.js' ) );
+    }
+    
+    add_action( 'admin_enqueue_scripts', 'register_my_plugin_scripts' );
+        
+    function load_my_plugin_scripts( $hook ) {
+        // Load only on ?page=sample-page
+        if( $hook != 'toplevel_page_sample-page' ) {
+        return;
+        }
+        // Load style & scripts.
+        wp_enqueue_style( 'my-plugin' );
+        wp_enqueue_style( 'my-plugin-bs-editable' );
+        wp_enqueue_style( 'my-plugin-bs-table' );
+        wp_enqueue_style( 'my-plugin-bootstrap' );
+        wp_enqueue_style( 'my-plugin-fa' );
+        wp_enqueue_script( 'my-plugin' );
+    
+    }
+        
+    add_action( 'admin_enqueue_scripts', 'load_my_plugin_scripts' );
+        
+}
+
     add_action('template_redirect', 'contact_form_treatment');
     add_action( 'after_setup_theme', 'mytheme_post_thumbnails' );
     add_action( 'widgets_init', 'grt_widgets_init' );
     add_action( 'wp_enqueue_scripts', 'grt_scripts' );
     add_post_type_support( 'page', 'excerpt' );
+
+
 
 
