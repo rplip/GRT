@@ -2,18 +2,63 @@
 let app = {
 
     init() {
-        /*
-        let glyphe = document.querySelectorAll('i');
-        console.log(glyphe);
-        glyphe[0].remvove();
-        */
-        let element = document.querySelectorAll('#wpbody-content');
-        console.log(element);
-        let createGlyph = document.createElement('i');
-        //createGlyph.appendChild(element[0].firstChild);
-        //createGlyph.setAttribute('class', 'fas fa-file-export');
+        const deleteButton = document.getElementById('delete__button');
+        const exportButton = document.getElementById('export__button');
+        const xClosed = document.getElementById('success-button');
         
-        console.log('feuille de js prise en charge');
+        deleteButton.onclick = function () {
+            const selectedRow = document.querySelectorAll('.selected');
+            for (let i = 0; i < selectedRow.length; i++) {
+                const element = selectedRow[i];
+                console.log(element["id"]);
+
+                $.ajax({
+                    type: 'POST',
+                    url: '/grtgaz-preprod/wp-content/plugins/admin-menu/delete_contact.php',
+                    data: {id: element["id"]}, 
+                    success : function(code_html, statut){
+                        console.log('thats good deelete')
+                        console.log(code_html, statut);
+                        const divSuccess = document.getElementById('success-message');
+                        divSuccess.classList.remove('d-none');
+                        element.classList.add('d-none');
+                    },
+                  });
+            }
+
+            const closeButton = document.querySelectorAll('.close');
+            closeButton[0].click();
+
+            
+        }
+        
+        exportButton.onclick = function () {
+
+            const selectedRow = document.querySelectorAll('.selected');
+            let allIDs = new Array();
+            for (let i = 0; i < selectedRow.length; i++) {
+                const element = selectedRow[i];
+                allIDs.push(element["id"]);
+            }
+            console.log(allIDs);
+            $.ajax({
+                type: 'POST',
+                url: '/grtgaz-preprod/wp-content/plugins/admin-menu/export_contact.php',
+                data: {id: allIDs}, 
+                success : function(code_html, statut){
+                    console.log(code_html);
+                    location.href = "/grtgaz-preprod/wp-content/plugins/admin-menu/export_contact2.php";
+                },
+              });
+        }
+
+        xClosed.onclick = function() {
+            const divSuccess = document.getElementById('success-message');
+            divSuccess.classList.add('d-none');
+        }
+
+
+
     }
 
 }

@@ -110,7 +110,8 @@ function contact_form_treatment() {
             $position = strip_tags(trim($_POST['position']));
             $email = $_POST['email'];
             $object = strip_tags(trim($_POST['object']));
-            $message = strip_tags(trim($_POST['message']));
+            $premessage = strip_tags(trim($_POST['message']));
+            $message = str_replace(CHR(13).CHR(10)," ",$premessage); 
 
             if (strlen($name) < 2)
             {
@@ -243,6 +244,7 @@ if ( is_admin()) {
     }
         
     add_action( 'admin_enqueue_scripts', 'load_my_plugin_scripts' );
+
         
 }
 

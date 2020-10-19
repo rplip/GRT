@@ -3,7 +3,7 @@
 let app = {
 
     init: function() {
-        app.addAnchorHomepage();
+        //app.addAnchorHomepage();
         app.addBackgroundClass();
         app.backToTop();
         app.catchLetter();
